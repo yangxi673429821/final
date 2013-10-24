@@ -1,0 +1,16 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @box.name
+%p
+  %b Barcode:
+  = @box.barcode
+%p
+  %b= "Items in #{@box.name}"
+  -@box.copies.each do |c|
+    %li= c.item.name
+
+= link_to 'Edit', edit_box_path(@box)
+\|
+= link_to 'Back', boxes_path

@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  barcode: MyString
+  loan_date: 2013-10-24 13:12:37
+  expected_return_date: 2013-10-24 13:12:37
+  date_returned: 2013-10-24 13:12:37
+  student_name: MyString
+  ucard: MyString
+
+two:
+  name: MyString
+  barcode: MyString
+  loan_date: 2013-10-24 13:12:37
+  expected_return_date: 2013-10-24 13:12:37
+  date_returned: 2013-10-24 13:12:37
+  student_name: MyString
+  ucard: MyString

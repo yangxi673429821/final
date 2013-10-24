@@ -1,0 +1,21 @@
+%h1 Listing copies
+
+%table
+  %tr
+    %th Item
+    %th Box
+    %th
+    %th
+    %th
+
+  - @copies.each do |copy|
+    %tr
+      %td= copy.item.name
+      %td= copy.box.name
+      %td= link_to 'Show', copy
+      %td= link_to 'Edit', edit_copy_path(copy)
+      %td= link_to 'Destroy', copy, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Copy', new_copy_path

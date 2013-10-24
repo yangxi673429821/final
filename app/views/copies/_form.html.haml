@@ -1,0 +1,18 @@
+= form_for @copy do |f|
+  - if @copy.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@copy.errors.count, "error")} prohibited this copy from being saved:"
+      %ul
+        - @copy.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :item
+    //= f.text_field :item_id
+    = f.collection_select(:item_id, Item.all, :id, :name)
+  .field
+    = f.label :box
+    //= f.text_field :box_id
+    = f.collection_select(:box_id, Box.all, :id, :name)
+  .actions
+    = f.submit 'Save'

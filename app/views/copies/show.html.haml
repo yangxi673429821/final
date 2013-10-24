@@ -1,0 +1,12 @@
+%p#notice= notice
+
+%p
+  %b Item:
+  = @copy.item.name
+%p
+  %b Box:
+  = @copy.box.name
+
+= link_to 'Edit', edit_copy_path(@copy)
+\|
+= link_to 'Back', copies_path

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Final</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<%=params.inspect%>
+<p></p>
+<%= link_to 'Items', items_path %>
+<%= link_to 'Boxes', boxes_path %>
+<%= link_to 'Copies', copies_path %>
+
+<%= yield %>
+
+</body>
+</html>
